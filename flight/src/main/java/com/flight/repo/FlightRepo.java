@@ -16,12 +16,6 @@ import com.flight.entity.Flight;
 @Repository
 public interface FlightRepo extends JpaRepository<Flight, Long>{
 	
-	/*public Optional<Flight> findByFlightCode(String flightCode);
 	
-	public Optional<List<Flight>> findAllByFlightType(String flightType);
-	
-	public Optional<List<Flight>> findAllByAirlineName(String airlineName);
-	
-	public Optional<List<Flight>> findAllByAirlineId(String airlineId);*/
 
 }

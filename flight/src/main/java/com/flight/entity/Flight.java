@@ -18,10 +18,7 @@ public class Flight {
 	
 	
 	
-	public Long getFlightId() {
-		return flightId;
-	}
-
+	
 
 	public void setFlightId(Long flightId) {
 		this.flightId = flightId;
