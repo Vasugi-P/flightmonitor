@@ -1,121 +1,106 @@
 package com.flight.entity;
 
 
-import java.time.LocalDate;
 
-import java.time.LocalTime;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
 
 @Entity
 public class FlightSchedule {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long scheduleId;
-	private LocalDate filghtDate;
-	private LocalTime  departureTime;
-	private String source;
-	private LocalTime transitArrivalTime;
-	private String transit;
-	private LocalTime transitDepTime;
+	private Long flightId;
+	private String flightDate;		
+	private String  departureTime;	
+	private String source;	
+	private String transit;	
+	private String arrival;	
+	private String transitDepTime;
 	private String destination;
-	private LocalTime dstArrivalTime;
-	private LocalTime travelTime;
-	
-	@OneToOne
-	private Flight flight;
-
-	public Long getScheduleId() {
-		return scheduleId;
+	private String dstArrivalTime;	
+	private String travelTime;
+	public Long getFlightId() {
+		return flightId;
 	}
-
-	public void setScheduleId(Long scheduleId) {
-		this.scheduleId = scheduleId;
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
 	}
-
-	public LocalDate getFilghtDate() {
-		return filghtDate;
+	public String getFlightDate() {
+		return flightDate;
 	}
-
-	public void setFilghtDate(LocalDate filghtDate) {
-		this.filghtDate = filghtDate;
+	public void setFlightDate(String flightDate) {
+		this.flightDate = flightDate;
 	}
-
-	public LocalTime getDepartureTime() {
+	public String getDepartureTime() {
 		return departureTime;
 	}
-
-	public void setDepartureTime(LocalTime departureTime) {
+	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
-
 	public String getSource() {
 		return source;
 	}
-
 	public void setSource(String source) {
 		this.source = source;
 	}
-
-	public LocalTime getTransitArrivalTime() {
-		return transitArrivalTime;
-	}
-
-	public void setTransitArrivalTime(LocalTime transitArrivalTime) {
-		this.transitArrivalTime = transitArrivalTime;
-	}
-
 	public String getTransit() {
 		return transit;
 	}
-
 	public void setTransit(String transit) {
 		this.transit = transit;
 	}
-
-	public LocalTime getTransitDepTime() {
+	public String getArrival() {
+		return arrival;
+	}
+	public void setArrival(String arrival) {
+		this.arrival = arrival;
+	}
+	public String getTransitDepTime() {
 		return transitDepTime;
 	}
-
-	public void setTransitDepTime(LocalTime transitDepTime) {
+	public void setTransitDepTime(String transitDepTime) {
 		this.transitDepTime = transitDepTime;
 	}
-
 	public String getDestination() {
 		return destination;
 	}
-
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-
-	public LocalTime getDstArrivalTime() {
+	public String getDstArrivalTime() {
 		return dstArrivalTime;
 	}
-
-	public void setDstArrivalTime(LocalTime dstArrivalTime) {
+	public void setDstArrivalTime(String dstArrivalTime) {
 		this.dstArrivalTime = dstArrivalTime;
 	}
-
-	public LocalTime getTravelTime() {
+	public String getTravelTime() {
 		return travelTime;
 	}
-
-	public void setTravelTime(LocalTime travelTime) {
+	public void setTravelTime(String travelTime) {
 		this.travelTime = travelTime;
 	}
-
-	public Flight getFlight() {
-		return flight;
+	public FlightSchedule(Long flightId, String flightDate, String departureTime, String source, String transit,
+			String arrival, String transitDepTime, String destination, String dstArrivalTime, String travelTime) {
+		super();
+		this.flightId = flightId;
+		this.flightDate = flightDate;
+		this.departureTime = departureTime;
+		this.source = source;
+		this.transit = transit;
+		this.arrival = arrival;
+		this.transitDepTime = transitDepTime;
+		this.destination = destination;
+		this.dstArrivalTime = dstArrivalTime;
+		this.travelTime = travelTime;
 	}
-
-	public void setFlight(Flight flight) {
-		this.flight = flight;
+	public FlightSchedule() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

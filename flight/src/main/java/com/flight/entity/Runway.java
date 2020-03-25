@@ -15,15 +15,13 @@ public class Runway {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long runwayId;
-	private LocalTime runwayWaitTime;
-	private LocalTime mid_Air_wait_time;
+	private Long airportId;
+	private Long flightId;
+	private String runwayWaitTime;
+	private String mid_Air_wait_time;
 	private String type;
 
-	@ManyToOne
-	private Airport airport;
 	
-	@OneToOne
-	private Flight flight;
 
 	public Long getRunwayId() {
 		return runwayId;
@@ -33,19 +31,19 @@ public class Runway {
 		this.runwayId = runwayId;
 	}
 
-	public LocalTime getRunwayWaitTime() {
+	public String getRunwayWaitTime() {
 		return runwayWaitTime;
 	}
 
-	public void setRunwayWaitTime(LocalTime runwayWaitTime) {
+	public void setRunwayWaitTime(String runwayWaitTime) {
 		this.runwayWaitTime = runwayWaitTime;
 	}
 
-	public LocalTime getMid_Air_wait_time() {
+	public String getMid_Air_wait_time() {
 		return mid_Air_wait_time;
 	}
 
-	public void setMid_Air_wait_time(LocalTime mid_Air_wait_time) {
+	public void setMid_Air_wait_time(String mid_Air_wait_time) {
 		this.mid_Air_wait_time = mid_Air_wait_time;
 	}
 
@@ -57,21 +55,23 @@ public class Runway {
 		this.type = type;
 	}
 
-	public Airport getAirport() {
-		return airport;
+	public Long getAirportId() {
+		return airportId;
 	}
 
-	public void setAirport(Airport airport) {
-		this.airport = airport;
+	public void setAirportId(Long airportId) {
+		this.airportId = airportId;
 	}
 
-	public Flight getFlight() {
-		return flight;
+	public Long getFlightId() {
+		return flightId;
 	}
 
-	public void setFlight(Flight flight) {
-		this.flight = flight;
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
 	}
+
+
 	
 	
 	

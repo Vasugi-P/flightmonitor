@@ -1,37 +1,37 @@
 package com.flight.DTO;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class AddFlightDto {
 	
 	private Long flightId;
-	private LocalDate filghtDate;
-	private LocalTime  departureTime;
+	private String flightDate;
+	private String  departureTime;
 	private String source;
 	private String arrival;
-	private LocalTime time;
+	
 	private String transit;
-	private LocalTime transitDepTime;
+	private String transitDepTime;
 	private String destination;
-	private LocalTime dstArrivalTime;
-	private LocalTime travelTime;
+	private String dstArrivalTime;
+	private String travelTime;
+	
 	public Long getFlightId() {
 		return flightId;
 	}
 	public void setFlightId(Long flightId) {
 		this.flightId = flightId;
 	}
-	public LocalDate getFilghtDate() {
-		return filghtDate;
+	public String getFlightDate() {
+		return flightDate;
 	}
-	public void setFilghtDate(LocalDate filghtDate) {
-		this.filghtDate = filghtDate;
+	public void setFilghtDate(String flightDate) {
+		this.flightDate = flightDate;
 	}
-	public LocalTime getDepartureTime() {
+	public String getDepartureTime() {
 		return departureTime;
 	}
-	public void setDepartureTime(LocalTime departureTime) {
+	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
 	public String getSource() {
@@ -46,22 +46,16 @@ public class AddFlightDto {
 	public void setArrival(String arrival) {
 		this.arrival = arrival;
 	}
-	public LocalTime getTime() {
-		return time;
-	}
-	public void setTime(LocalTime time) {
-		this.time = time;
-	}
 	public String getTransit() {
 		return transit;
 	}
 	public void setTransit(String transit) {
 		this.transit = transit;
 	}
-	public LocalTime getTransitDepTime() {
+	public String getTransitDepTime() {
 		return transitDepTime;
 	}
-	public void setTransitDepTime(LocalTime transitDepTime) {
+	public void setTransitDepTime(String transitDepTime) {
 		this.transitDepTime = transitDepTime;
 	}
 	public String getDestination() {
@@ -70,19 +64,18 @@ public class AddFlightDto {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public LocalTime getDstArrivalTime() {
+	public String getDstArrivalTime() {
 		return dstArrivalTime;
 	}
-	public void setDstArrivalTime(LocalTime dstArrivalTime) {
+	public void setDstArrivalTime(String dstArrivalTime) {
 		this.dstArrivalTime = dstArrivalTime;
 	}
-	public LocalTime getTravelTime() {
+	public String getTravelTime() {
 		return travelTime;
 	}
-	public void setTravelTime(LocalTime travelTime) {
+	public void setTravelTime(String travelTime) {
 		this.travelTime = travelTime;
 	}
-	
 	
 	
 

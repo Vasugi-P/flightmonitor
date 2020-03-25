@@ -12,10 +12,10 @@ public class Flight {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long flightId;
-	private String airlineId;
 	private String airlineName;
 	private FlightType flight;
 	private String flightCode;
+	
 	
 	
 	public Long getFlightId() {
@@ -28,14 +28,7 @@ public class Flight {
 	}
 
 
-	public String getAirlineId() {
-		return airlineId;
-	}
-
-
-	public void setAirlineId(String airlineId) {
-		this.airlineId = airlineId;
-	}
+	
 
 
 	public String getAirlineName() {
@@ -71,6 +64,14 @@ public class Flight {
 	public Flight() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+
+	public Flight(String airlineName, FlightType flight, String flightCode) {
+		super();
+		this.airlineName = airlineName;
+		this.flight = flight;
+		this.flightCode = flightCode;
 	}
 	
 	

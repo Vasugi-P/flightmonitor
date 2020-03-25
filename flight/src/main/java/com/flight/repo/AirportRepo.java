@@ -14,6 +14,6 @@ import com.flight.entity.Airport;
 public interface AirportRepo extends JpaRepository<Airport, Long>{
 
 	
-	public Optional<Airport> findByAirportCode(String airportCode);
+	/*public Optional<Airport> findByAirportCode(String airportCode);*/
 	
 }
